@@ -164,6 +164,36 @@ git push origin NEW-BRANCH-WITH-MEANINGFUL-NAME
 ### 6. Make a pull request
 On your github account page go to your fork and click on 'branches'. You'll see a **New pull request** button on the right side of NEW-BRANCH-WITH-MEANINGFUL-NAME. Click on it and write a good explanation of your patch purpose.
 
+### 7. After pull request actions
+The contribution workflow doesn't end after you request the merge of your mods. You may need discuss it and fixes and changes can be requested to you before it can be upstreamed. So you need to know how to proceed in that case. The most important thing to know is that you won't need to open a new pull request: all changes made on your branch will be tracked by github and showed on the pull request.
+
+* Case 1: Your patch has conflict with the base branch: All you need to do is rebase your changes on top of upstream/MAIN-BRANCH-NAME:
+```shell
+# on NEW-BRANCH-WITH-MEANINGFUL-NAME
+git fetch upstream
+git rebase upstream/MAIN-BRANCH-NAME
+# you'll need to fix the conflicts
+# then update your remote branch
+git push -f origin NEW-BRANCH-WITH-MEANINGFUL-NAME
+```
+
+* Case 2: You need to change something on your last commit: You should amend the change:
+```shell
+# on NEW-BRANCH-WITH-MEANINGFUL-NAME
+git add FILES-CHANGED
+git commit --amend
+# then update your remote branch
+git push -f origin NEW-BRANCH-WITH-MEANINGFUL-NAME
+```
+
+* Case 3: You need to change a commit (not the last one) or squash commits: This is the most complex case, but you have a very powerful tool to that job: git interactive rebase. As it's a lengthy topic I recommend consulting [the Rewriting History section on Pro Git book](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History). You'll do something like:
+```shell
+# on NEW-BRANCH-WITH-MEANINGFUL-NAME
+git rebase -i upstream/MAIN-BRANCH
+# then update your remote branch
+git push -f origin NEW-BRANCH-WITH-MEANINGFUL-NAME
+```
+
 ## Good Practices & Tips
 
 ## References & Resources
