@@ -18,6 +18,15 @@ For doing commits you will need to write a comment (in most cases, a template is
 # config your editor
 git config --local core.editor "'COMPLETE/PATH/TO/YOUR/EDITOR'"
 ```
+Example using Notepad++ for Windows:
+```shell
+# On a x86 system
+git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
+```
+```shell
+# On a x64 system
+git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"
+```
 ### 3. Configure the commit template
 Each commit needs a message and one of the most difficult tasks when working in Git is write good commit messages. A well-crafted git commit message is the best way to communicate **context** about a change to fellow developers (and indeed to their future selves). A diff will tell you **_what_** changed, but only the commit message can properly tell you **_why_**. A good template will make all the things easier.
 Look at the repository for hidden files like _.gitcommittemplate_ or _.git_commit_msg_, when you find the correct file, run the following command to configure the template:
