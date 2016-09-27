@@ -1,6 +1,33 @@
 # Git(Hub) from the ground up
 
-## Git & vesion control introduction
+## Git & version control introduction
+When working on code for any kind of software project, it is important to track all changes. In fact, keep the records of the work is highly critical and essential when you work at project with multiple developers, all of them will be doing updates at the same code (and sometimes at the same time).
+
+Version Control System (**VCS**) appears as a solution to do this. It consists in a software that helps software developers to work together and maintain a complete and detailed history of their work.  Without this history, it would be almost impossible to work with tens (or even hundreds) of developers on the same project. Additionally, allows the configuration manager to locate bugs and revert the code back to a previous working version.
+
+In general, there are three different models of **VCS** and each one has its particularities.
+
+1. Localized Version Control Systems (**LVCS**)
+  * The most common users choice, a single local copy of the project in another directory.
+2. Centralized Version Control Systems (**CVCS**)
+  * The main concept is that it works in a client and server relationship. The repository is located in one place and provides access to many clients. The most popular tool is **_SVN_**.
+3. Distributed/Decentralized Version Control Systems (**DVCS**):
+  * Each user has their own copy of the entire repository, not just the files but the history as well. The most popular tools is **_Git_** and **_Mercurial_**.
+
+[Here](http://blogs.atlassian.com/2012/02/version-control-centralized-dvcs/) and [here](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) you can find more information about each one. This summary will explore a little bit more in **DVCS** (~~because Git uses~~)
+
+**_Git_** uses the third model, **DVCS**. In this model, each developer works directly with their own local repository (i.e, their fork of the project) and all changes are shared between repositories as a separate step. In resume, the developers can collaborate with different groups of people in different ways simultaneously within the same project.
+Also, it is important to have in mind that each fork of a project consist in a mirror of the main repository, so if the server dies, each develop repository can be serve as a backup and used to restore the server.
+
+The main benefits of **DVCS** are:
+* Powerful and detailed change tracking, which means less conflicts;
+* The job can be done offline - except when you are sending changes to the server;
+* Branching and merging is more reliable;
+* It is very fast.
+
+In other hand, **DVCS** have some drawbacks:
+* The distributed model is difficult to understand;
+* It is very easy to make mistake until you are familiar with the model and with the workflow;
 
 ## Git first-time config
 
