@@ -148,7 +148,14 @@ Don't make changes on your local main branch. Instead create a new branch to imp
 git checkout -b NEW-BRANCH-WITH-MEANINGFUL-NAME MAIN-BRANCH-NAME
 ```
 ### 4. Implement the changes
-ToDo
+Here you'll actually edit the files and commit your changes. Commands that you'll often use are: 
+
+* [git add](https://git-scm.com/docs/git-add),
+* [git rm](https://git-scm.com/docs/git-rm),
+* [git mv](https://git-scm.com/docs/git-mv),
+* [git status](https://git-scm.com/docs/git-status),
+* [git commit](https://git-scm.com/docs/git-commit) and so on.
+
 ### 5. Push your branch to your github account
 Once you have finished your mods and made commits, you can rebase them on top of upstream main branch.
 ```shell
